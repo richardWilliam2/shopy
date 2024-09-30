@@ -1,0 +1,390 @@
+body{
+
+    font-family: 'Courier New', Courier, monospace;
+    background-color: white;
+    padding: 20px;
+
+}
+
+.container{
+
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+/* From Uiverse.io by Yaya12085 */ 
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    background-color: #d7d7d7;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+  }
+  
+  .title {
+    font-size: 28px;
+    color: royalblue;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+  }
+  
+  .title::before,.title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: royalblue;
+  }
+  
+  .title::before {
+    width: 18px;
+    height: 18px;
+    background-color: royalblue;
+  }
+  
+  .title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+  }
+  
+  .message, .signin {
+    color: rgba(88, 87, 87, 0.822);
+    font-size: 14px;
+  }
+  
+  .signin {
+    text-align: center;
+  }
+  
+  .signin a {
+    color: royalblue;
+  }
+  
+  .signin a:hover {
+    text-decoration: underline royalblue;
+  }
+  
+  .flex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+  }
+  
+  .form label {
+    position: relative;
+  }
+  
+  .form label .input {
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+  }
+  
+  .form label .input + span {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    color: grey;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+  }
+  
+  .form label .input:placeholder-shown + span {
+    top: 15px;
+    font-size: 0.9em;
+  }
+  
+  .form label .input:focus + span,.form label .input:valid + span {
+    top: 30px;
+    font-size: 0.7em;
+    font-weight: 600;
+  }
+  
+  .form label .input:valid + span {
+    color: green;
+  }
+  
+  .submit {
+    border: none;
+    outline: none;
+    background-color: royalblue;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    transform: .3s ease;
+  }
+  
+  .submit:hover {
+    background-color: rgb(56, 90, 194);
+  }
+  
+  @keyframes pulse {
+    from {
+      transform: scale(0.9);
+      opacity: 1;
+    }
+  
+    to {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
+
+  body {
+
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+
+}
+
+.gallery-container{
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+
+}
+.gallery-container:hover .gallery-item{
+
+    opacity: .5;
+}
+
+.gallery-container:hover .gallery-item:hover{
+
+    opacity: 1;
+}
+
+.gallery-item img{
+
+    width: 400px;
+    height: auto;
+    margin: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+
+
+}
+
+.gallery-item{
+
+    
+    width: 400px;
+    height: auto;
+    margin: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.3;
+
+
+}
+
+.gallery-item:hover{
+
+    transform: translateY(-20px);
+}
+
+.gallery-item img{
+
+    width: 100%;
+    height: auto;
+}
+
+.container{
+
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+
+}
+
+.card{
+
+    background-color: white;
+    border: 1px solid;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex: 1;
+    max-width: 300px;
+
+}
+
+.card h2{
+
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #333;
+
+}
+
+.card p {
+
+    color: #666;
+
+}
+
+nav{
+
+    background-color: #333;
+    padding: 10px;
+
+}
+
+nav ul{
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+
+}
+
+nav ul li{
+
+    position: relative;
+    margin: 15px;
+
+}
+
+nav ul li a:hover{
+
+    color: #ff6347;
+
+}
+
+nav ul li .dropdown-content{
+
+    display: none;
+    position: relative;
+    background-color: #333;
+    box-shadow: 0px 8px 16px 0px rgba(red, green, blue, alpha);
+    z-index: 1;
+    min-width: 160px;
+    padding: 0;
+
+}
+
+nav ul li .dropdown-content li{
+
+    margin: 0;
+
+}
+
+nav ul li .dropdown-content li a{
+
+    padding: 10px 15px;
+
+}
+
+nav ul li .dropdown-content li a:hover{
+
+    background-color: #575757;
+
+}
+
+nav ul li:hover .dropdown-content{
+
+    display: block;
+
+}
+footer{
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.footer-container{
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+}
+.footer-section{
+
+    flex-basis: 23%;
+    margin-bottom: 20px;
+
+}
+.footer-section h4{
+
+    margin-bottom: 15px;
+    font-size: 18;
+    color: #ff6347;
+
+}
+.footer-section p, .footer-section ul {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+
+}
+.footer-section ul{
+
+    list-style-type: none;
+
+}
+.footer-section ul li {
+
+    margin-bottom: 10px;
+
+}
+.footer-section ul li a{
+
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+
+}
+.footer-section ul li a:hover{
+
+    color: #ff6347;
+
+}
+.social-link a:hover{
+
+    color: #ff6347;
+
+}
+.footer-bottom{
+
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    border-top: 1px solid #444;
+    font-size: 14px;
+
+}
+.footer-bottom p{
+    margin: 0;
+}
