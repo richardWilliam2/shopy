@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeria de fotos</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
 </head>
+
 <body>
-       
+
     <nav>
 
         <ul>
@@ -15,11 +18,12 @@
             <li><a href="#Home">Home</a></li>
             <li><a href="#Sobre">Sobre</a></li>
             <li class="dropdown"><a href="#servicos">serviços</a>
-            <ul class="dropdown-content">
-                <li><a href="#Desing">Desing</a></li>
-                <li><a href="#Marketing">Marketing</a></li>
-                <li><a href="#Desenvolvimento">Desenvolvimento</a></li>
-            </ul></li>
+                <ul class="dropdown-content">
+                    <li><a href="#Desing">Desing</a></li>
+                    <li><a href="#Marketing">Marketing</a></li>
+                    <li><a href="#Desenvolvimento">Desenvolvimento</a></li>
+                </ul>
+            </li>
 
             <ul>
                 <li>
@@ -57,33 +61,33 @@
         <div class="container">
 
             <div class="card">
-    
+
                 <h2>Titulo</h2>
                 <p>Descrição</p>
-    
+
             </div>
             <div class="card">
-    
+
                 <h2>Titulo</h2>
                 <p>Descrição</p>
-            
+
             </div>
             <div class="card">
-    
+
                 <h2>Titulo</h2>
                 <p>Descrição</p>
-    
+
             </div>
-    
+
         </div>
     </div>
     <section class="produto">
 
         <div class="Imagens-produto">
 
-            <img src="oi goku.png" alt="oi goku" class="imagem-principal">
+            <img id="imagem-principal" src="oi goku.png" alt="oi goku" >
             <div class="miniaturas">
-                <img src="oi goku.png" alt="oi goku">
+                <img data-imagem="oi goku.png"src="oi goku.png" alt="oi goku">
                 <img src="oi3.png" alt="oioioi">
                 <img src="goku2.png" alt="gokusuper">
             </div>
@@ -92,11 +96,11 @@
 
         <div class="detalhes-produto">
 
-                <h2>Action Figure Goku</h2>
-                <p class="descricao">produto de alta qualidade que atende todos seus desejos</p>
-                <p class="preco">R$ 499,99</p>
+            <h2>Action Figure Goku</h2>
+            <p class="descricao">produto de alta qualidade que atende todos seus desejos</p>
+            <p class="preco">R$ 499,99</p>
 
-       
+
 
             <form class="opcoes-compra">
                 <label for="Tamanho">Tamanho:</label>
@@ -105,17 +109,17 @@
                     <option>M</option>
                     <option>G</option>
                 </select>
-        
 
-            <label for="Cores">Cor:</label>
-            <select id="Cores">
 
-                <option>Preto</option>
-                <option>Azul</option>
-                <option>Amarelo</option>
-            </select>
+                <label for="Cores">Cor:</label>
+                <select id="Cores">
 
-            <button type="submit">Comprar</button>
+                    <option>Preto</option>
+                    <option>Azul</option>
+                    <option>Amarelo</option>
+                </select>
+
+                <button type="submit">Comprar</button>
             </form>
         </div>
     </section>
@@ -125,7 +129,7 @@
         <img src="Anonimo.png" alt="Foto anonima" class="foto-usuario">
         <p><strong>Maria:</strong>bela bosta</p>
 
-    </div>    
+    </div>
 
     <div class="comentario">
 
@@ -170,5 +174,19 @@
             <p>Direitos da empresa</p>
         </div>
     </footer>
+
+    <script>
+        const imagemprincipal = document.getElementByld('imagem-principal');
+        const miniaturas = document.querySelectorAll('.miniatura')
+        miniaturas.forEach(miniatura => {
+            miniatura.addEventListener('click', function () {
+                const novaImagem = this.getAttribute('data-imagem');
+                imagemprincipal.src = novaImagem;
+
+            });
+        });
+    </script>
+
 </body>
+
 </html>
